@@ -10,22 +10,9 @@
 		D12F30A924FF711800E09A44 /* RKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D12F30A724FF710C00E09A44 /* RKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D12F30B224FF719700E09A44 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30B124FF719700E09A44 /* Date+Extensions.swift */; };
 		D12F30B424FF71F800E09A44 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30B324FF71DF00E09A44 /* DateFormatters.swift */; };
-		D12F30BE24FF733B00E09A44 /* RKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12F30A424FF710C00E09A44 /* RKUIKit.framework */; };
-		D12F30C624FF737C00E09A44 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30C524FF737C00E09A44 /* DateFormatterTests.swift */; };
-		D12F30C824FF743900E09A44 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30C724FF743900E09A44 /* DateExtensionsTests.swift */; };
 		D12F30CA24FF747B00E09A44 /* CollectionView+TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30C924FF747A00E09A44 /* CollectionView+TableView+Extensions.swift */; };
 		D12F30CC24FF755B00E09A44 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30CB24FF754F00E09A44 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D12F30BF24FF733B00E09A44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D12F309B24FF710C00E09A44 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D12F30A324FF710C00E09A44;
-			remoteInfo = RKUIKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D12F30A424FF710C00E09A44 /* RKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,10 +20,6 @@
 		D12F30A824FF711800E09A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12F30B124FF719700E09A44 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D12F30B324FF71DF00E09A44 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
-		D12F30B924FF733B00E09A44 /* RKUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D12F30BD24FF733B00E09A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D12F30C524FF737C00E09A44 /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
-		D12F30C724FF743900E09A44 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
 		D12F30C924FF747A00E09A44 /* CollectionView+TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+TableView+Extensions.swift"; sourceTree = "<group>"; };
 		D12F30CB24FF754F00E09A44 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,14 +32,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D12F30B624FF733B00E09A44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D12F30BE24FF733B00E09A44 /* RKUIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				D12F30A624FF710C00E09A44 /* RKUIKit */,
-				D12F30BA24FF733B00E09A44 /* RKUIKitTests */,
 				D12F30A524FF710C00E09A44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				D12F30A424FF710C00E09A44 /* RKUIKit.framework */,
-				D12F30B924FF733B00E09A44 /* RKUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,24 +78,6 @@
 				D12F30C924FF747A00E09A44 /* CollectionView+TableView+Extensions.swift */,
 			);
 			path = UIKitHelper;
-			sourceTree = "<group>";
-		};
-		D12F30BA24FF733B00E09A44 /* RKUIKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				D12F30C424FF735400E09A44 /* UIKitHelperTests */,
-				D12F30BD24FF733B00E09A44 /* Info.plist */,
-			);
-			path = RKUIKitTests;
-			sourceTree = "<group>";
-		};
-		D12F30C424FF735400E09A44 /* UIKitHelperTests */ = {
-			isa = PBXGroup;
-			children = (
-				D12F30C524FF737C00E09A44 /* DateFormatterTests.swift */,
-				D12F30C724FF743900E09A44 /* DateExtensionsTests.swift */,
-			);
-			path = UIKitHelperTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,24 +112,6 @@
 			productReference = D12F30A424FF710C00E09A44 /* RKUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D12F30B824FF733B00E09A44 /* RKUIKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D12F30C124FF733B00E09A44 /* Build configuration list for PBXNativeTarget "RKUIKitTests" */;
-			buildPhases = (
-				D12F30B524FF733B00E09A44 /* Sources */,
-				D12F30B624FF733B00E09A44 /* Frameworks */,
-				D12F30B724FF733B00E09A44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D12F30C024FF733B00E09A44 /* PBXTargetDependency */,
-			);
-			name = RKUIKitTests;
-			productName = RKUIKitTests;
-			productReference = D12F30B924FF733B00E09A44 /* RKUIKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,9 +125,6 @@
 					D12F30A324FF710C00E09A44 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
-					};
-					D12F30B824FF733B00E09A44 = {
-						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -208,20 +142,12 @@
 			projectRoot = "";
 			targets = (
 				D12F30A324FF710C00E09A44 /* RKUIKit */,
-				D12F30B824FF733B00E09A44 /* RKUIKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D12F30A224FF710C00E09A44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D12F30B724FF733B00E09A44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,24 +168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D12F30B524FF733B00E09A44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D12F30C624FF737C00E09A44 /* DateFormatterTests.swift in Sources */,
-				D12F30C824FF743900E09A44 /* DateExtensionsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D12F30C024FF733B00E09A44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D12F30A324FF710C00E09A44 /* RKUIKit */;
-			targetProxy = D12F30BF24FF733B00E09A44 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D12F30AA24FF711800E09A44 /* Debug */ = {
@@ -431,40 +340,6 @@
 			};
 			name = Release;
 		};
-		D12F30C224FF733B00E09A44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RKUIKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.randhir.uikitframework.RKUIKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D12F30C324FF733B00E09A44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RKUIKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.randhir.uikitframework.RKUIKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,15 +357,6 @@
 			buildConfigurations = (
 				D12F30AD24FF711800E09A44 /* Debug */,
 				D12F30AE24FF711800E09A44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D12F30C124FF733B00E09A44 /* Build configuration list for PBXNativeTarget "RKUIKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D12F30C224FF733B00E09A44 /* Debug */,
-				D12F30C324FF733B00E09A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
