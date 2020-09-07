@@ -33,7 +33,6 @@ public struct NativeToolTipViewDimension {
 
 /// Show Native tooltip as a popover.
 public class NativeToolTipViewController: PopoverViewController {
-    // Style based on Zeplin mocks https://zpl.io/a3D39rW
     private enum Constant {
         static let titleLabelHeightConstant: CGFloat = 21.0
         static let titleLabelTopConstant: CGFloat = 8.0
