@@ -13,7 +13,7 @@ class LandingViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak private var collectionView: UICollectionView!
-
+    
     private var viewModel: LandingViewModel!
     
     override func viewDidLoad() {
@@ -67,6 +67,41 @@ class LandingViewController: UIViewController {
         // reloading in main queue from RKUIKit helper func
         collectionView.reloadDataInMainQueue()
     }
+    fileprivate func loadSampleView() {
+        let sampleView = SampleView.loadFromNib
+        sampleView.alpha = 1.0
+        self.view.addSubview(sampleView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            UIView.animate(withDuration: 1.0) {
+                sampleView.alpha = 0.0
+                sampleView.removeFromSuperview()
+            }
+        }
+    }
+    
+    fileprivate func showPopOver(sender: UIButton) {
+        
+        // Calculate width allowed for the tooltip. Exclude the side margins.
+        //                let tipViewWidth = self.view.bounds.size.width - (2 * 12)
+        
+        // Initialize the tooltip VC
+        let newToolTipVC = NativeToolTipViewController(with: sender)
+        newToolTipVC.backgroundColor = .white
+        //                // Set the title
+        //                newToolTipVC.setTitleText(with: "title text")
+        //
+        //                // Set body text
+        //                if let attributedString = newToolTipVC.getAttributedStringForBodyText(bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum") {
+        //                    attributedString.addAttributes([.font: UIFont.systemFont(ofSize: 11.0, weight: .bold)], range: NSRange(location: 0, length: 8))
+        //                    newToolTipVC.setBodyText(with: attributedString)
+        //                }
+        //
+        //                // Update tooltip size based on text.
+        //                newToolTipVC.updateToolTipSize(toolTipOccupiedWith: tipViewWidth)
+        newToolTipVC.loadViewIfNeeded()
+        
+        self.present(newToolTipVC, animated: false, completion: nil)
+    }
 }
 
 // MARK: - Collection View delegate and datasource methods
@@ -82,29 +117,10 @@ extension LandingViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = BasicCollectionViewCell.dequeue(for: collectionView, at: indexPath)
         if let data = viewModel.getCellItem(atIndex: indexPath.item) {
             cell.configCell(model: data)
+            cell.hideInfoButton(isHide: indexPath.item != 0)
             cell.infoActionClosure = { [weak self] sender in
                 guard let self = self else { return }
-                
-                // Calculate width allowed for the tooltip. Exclude the side margins.
-                let tipViewWidth = self.view.bounds.size.width - (2 * 12)
-                
-                // Initialize the tooltip VC
-                let newToolTipVC = NativeToolTipViewController(with: sender)
-                
-                // Set the title
-                newToolTipVC.setTitleText(with: "title text")
-                
-                // Set body text
-                if let attributedString = newToolTipVC.getAttributedStringForBodyText(bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum") {
-                    attributedString.addAttributes([.font: UIFont.systemFont(ofSize: 11.0, weight: .bold)], range: NSRange(location: 0, length: 8))
-                    newToolTipVC.setBodyText(with: attributedString)
-                }
-                
-                // Update tooltip size based on text.
-                newToolTipVC.updateToolTipSize(toolTipOccupiedWith: tipViewWidth)
-                newToolTipVC.loadViewIfNeeded()
-                
-                self.present(newToolTipVC, animated: false, completion: nil)
+                self.showPopOver(sender: sender)
             }
         }
         return cell
@@ -121,6 +137,7 @@ extension LandingViewController: UICollectionViewDelegate, UICollectionViewDataS
         case 2:
                  // From Nib
                  print("From Nib")
+            loadSampleView()
         default:
             break
         }

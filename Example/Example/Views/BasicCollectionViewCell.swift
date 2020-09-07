@@ -23,6 +23,11 @@ class BasicCollectionViewCell: UICollectionViewCell, NibLoadable {
         infoActionClosure?(sender)
     }
     
+    func hideInfoButton(isHide: Bool) {
+        infoButtonAction.isHidden = isHide
+        
+    }
+    
     func configCell(model: LandingModel) {
         titleLabel.text = model.title
     }

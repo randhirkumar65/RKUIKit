@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11B1A93250654D70030079B /* SampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11B1A92250654D70030079B /* SampleView.xib */; };
+		D11B1A952506552C0030079B /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B1A942506552C0030079B /* SampleView.swift */; };
 		D1725563250612C5006D1CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725562250612C5006D1CAB /* AppDelegate.swift */; };
 		D1725565250612C5006D1CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725564250612C5006D1CAB /* SceneDelegate.swift */; };
 		D1725567250612C5006D1CAB /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725566250612C5006D1CAB /* LandingViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		224A98763BF8E5733BD32698 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		D11B1A92250654D70030079B /* SampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleView.xib; sourceTree = "<group>"; };
+		D11B1A942506552C0030079B /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		D172555F250612C5006D1CAB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1725562250612C5006D1CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1725564250612C5006D1CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				D172557A2506145A006D1CAB /* BasicCollectionViewCell.swift */,
 				D172557B2506145A006D1CAB /* BasicCollectionViewCell.xib */,
+				D11B1A92250654D70030079B /* SampleView.xib */,
+				D11B1A942506552C0030079B /* SampleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D172556F250612C7006D1CAB /* LaunchScreen.storyboard in Resources */,
+				D11B1A93250654D70030079B /* SampleView.xib in Resources */,
 				D172557D2506145A006D1CAB /* BasicCollectionViewCell.xib in Resources */,
 				D172556C250612C7006D1CAB /* Assets.xcassets in Resources */,
 				D172556A250612C5006D1CAB /* Main.storyboard in Resources */,
@@ -253,6 +260,7 @@
 			files = (
 				D1725567250612C5006D1CAB /* LandingViewController.swift in Sources */,
 				D18C4AE725061CEF0061A75A /* LandingViewModel.swift in Sources */,
+				D11B1A952506552C0030079B /* SampleView.swift in Sources */,
 				D172557C2506145A006D1CAB /* BasicCollectionViewCell.swift in Sources */,
 				D18C4AE925061D2D0061A75A /* LandingModel.swift in Sources */,
 				D1725563250612C5006D1CAB /* AppDelegate.swift in Sources */,
