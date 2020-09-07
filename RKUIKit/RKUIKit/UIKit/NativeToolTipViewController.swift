@@ -46,31 +46,32 @@ public class NativeToolTipViewController: PopoverViewController {
         static let titleLineSpacing: CGFloat = 20.0
     }
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var bodyLabel: UILabel!
-    @IBOutlet private weak var titleLabelHeightConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var titleLabelTopConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var bodyLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet private weak var bodyLabel: UILabel?
+    @IBOutlet private weak var titleLabelHeightConstraint: NSLayoutConstraint?
+    @IBOutlet private weak var titleLabelTopConstraint: NSLayoutConstraint?
+    @IBOutlet private weak var bodyLabelTopConstraint: NSLayoutConstraint?
 
     private var titleAttributedText: NSAttributedString? {
         get {
-            return titleLabel.attributedText
+            return titleLabel?.attributedText
         }
         set {
-            titleLabel.isHidden = false
-            titleLabelHeightConstraint.constant = Constant.titleLabelHeightConstant
-            titleLabelTopConstraint.constant = Constant.titleLabelTopConstant
-            bodyLabelTopConstraint.constant = Constant.bodyLabelTopConstant
-            titleLabel.attributedText = newValue
+            guard let title = titleLabel else { return }
+            title.isHidden = false
+            titleLabelHeightConstraint?.constant = Constant.titleLabelHeightConstant
+            titleLabelTopConstraint?.constant = Constant.titleLabelTopConstant
+            bodyLabelTopConstraint?.constant = Constant.bodyLabelTopConstant
+            titleLabel?.attributedText = newValue
         }
     }
 
     private var bodyAttributedText: NSAttributedString? {
         get {
-            return bodyLabel.attributedText
+            return bodyLabel?.attributedText
         }
         set {
-            bodyLabel.attributedText = newValue
+            bodyLabel?.attributedText = newValue
         }
     }
 
@@ -190,8 +191,8 @@ public class NativeToolTipViewController: PopoverViewController {
     }
 
     public func hideTitle(_ state: Bool) {
-        titleLabel.isHidden = state
-        titleLabelHeightConstraint.constant = 0
-        titleLabelTopConstraint.constant = 0
+        titleLabel?.isHidden = state
+        titleLabelHeightConstraint?.constant = 0
+        titleLabelTopConstraint?.constant = 0
     }
 }
