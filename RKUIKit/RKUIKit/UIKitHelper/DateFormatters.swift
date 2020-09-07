@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DateTimeFormatterStyle {
+public enum DateTimeFormatterStyle {
     case numericMonthNumericDay
     case shortMonthShortDayShortYear
     case mediumMonthLongYear
@@ -42,7 +42,7 @@ enum DateTimeFormatterStyle {
     }
 }
 
-class CommonDateTimeFormatters {
+public class CommonDateTimeFormatters {
     
     public class func dateFormatter(style: DateTimeFormatterStyle) -> DateFormatter {
         return style.dateFormatter

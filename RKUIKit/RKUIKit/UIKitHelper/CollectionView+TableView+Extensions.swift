@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Collection View Helper extensions
 extension UICollectionView {
-    func reloadDataInMainQueue() {
+    public func reloadDataInMainQueue() {
         DispatchQueue.main.async {
             self.reloadData()
         }
@@ -19,7 +19,7 @@ extension UICollectionView {
 
 // MARK: - Table View Helper extensions
 extension UITableView {
-    func reloadDataInMainQueue() {
+    public func reloadDataInMainQueue() {
         DispatchQueue.main.async {
             self.reloadData()
         }

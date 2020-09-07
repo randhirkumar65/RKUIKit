@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopoverViewController: UIViewController {
+public class PopoverViewController: UIViewController {
     /// An instance of this class presents a viewcontroller as popover for compact environments(Phone).
     final class PopOverController: NSObject, UIPopoverPresentationControllerDelegate {
         override init() {
@@ -20,7 +20,7 @@ class PopoverViewController: UIViewController {
         }
     }
 
-    struct PopoverContentSize {
+    public struct PopoverContentSize {
         static let width: CGFloat = 350.0
         static let height: CGFloat = 155.0
     }
@@ -72,7 +72,7 @@ class PopoverViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         view.superview?.layer.cornerRadius = cornerRadius ?? 0
     }

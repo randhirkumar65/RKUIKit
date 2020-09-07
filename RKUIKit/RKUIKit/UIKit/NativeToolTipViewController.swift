@@ -9,7 +9,7 @@
 
 import UIKit
 
-struct NativeToolTipViewDimension {
+public struct NativeToolTipViewDimension {
     struct View {
         static let horizontalOffset: CGFloat = 12 // TipView leading/trailing offset
         static let verticalOffset: CGFloat = 20
