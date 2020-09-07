@@ -10,7 +10,7 @@
 import UIKit
 
 public struct NativeToolTipViewDimension {
-    struct View {
+    public struct View {
         static let horizontalOffset: CGFloat = 12 // TipView leading/trailing offset
         static let verticalOffset: CGFloat = 20
         
@@ -74,15 +74,15 @@ public class NativeToolTipViewController: PopoverViewController {
         }
     }
 
-    var titleFont: UIFont {
+    public var titleFont: UIFont {
         return Constant.titleFont
     }
 
-    var bodyFont: UIFont {
+    public var bodyFont: UIFont {
         return Constant.regularBodyFont
     }
 
-    var bodyFontBold: UIFont {
+    public var bodyFontBold: UIFont {
         return Constant.boldBodyFont
     }
 
@@ -101,14 +101,14 @@ public class NativeToolTipViewController: PopoverViewController {
 
     /// Set title text
     /// - Parameter titleText: string to set for title
-    func setTitleText(with titleText: String?) {
+    public func setTitleText(with titleText: String?) {
         // Title text
         titleAttributedText = getAttributedStringForTitleText(titleText: titleText)
     }
 
     /// Given a localized string, this returns an attributed strings with default attributes defined for the body text for tooltip.
     /// - Parameter bodyText: text to be shown in body of tooltip
-    func getAttributedStringForTitleText(titleText: String?) -> NSMutableAttributedString? {
+    public func getAttributedStringForTitleText(titleText: String?) -> NSMutableAttributedString? {
         guard let titleText = titleText else {
             return nil
         }
@@ -130,20 +130,20 @@ public class NativeToolTipViewController: PopoverViewController {
 
     /// Set body text on toolip
     /// - Parameter text: normal localized string
-    func setBodyText(with text: String?) {
+    public func setBodyText(with text: String?) {
         bodyAttributedText = getAttributedStringForBodyText(bodyText: text)
     }
 
     /// Set body text for tooltip
     /// - Parameter attributedString: attributed string to set for body
-    func setBodyText(with attributedString: NSMutableAttributedString?) {
+    public func setBodyText(with attributedString: NSMutableAttributedString?) {
         // Body text
         bodyAttributedText = attributedString
     }
 
     /// Given a localized string, this returns an attributed strings with default attributes defined for the body text for tooltip.
     /// - Parameter bodyText: text to be shown in body of tooltip
-    func getAttributedStringForBodyText(bodyText: String?) -> NSMutableAttributedString? {
+    public func getAttributedStringForBodyText(bodyText: String?) -> NSMutableAttributedString? {
         guard let bodyText = bodyText else {
             return nil
         }
@@ -165,7 +165,7 @@ public class NativeToolTipViewController: PopoverViewController {
 
     /// Updates the size of tooltip based on title text, body text and available width
     /// - Parameter toolTipOccupiedWith: available width for tooltip
-    func updateToolTipSize(toolTipOccupiedWith: CGFloat) {
+    public func updateToolTipSize(toolTipOccupiedWith: CGFloat) {
         // This is the allowed space for text. We need to substract the padding for label inside the tooltip
         let tipViewAvailableTextWidth = toolTipOccupiedWith - 2 * Constant.labelPadding
 
@@ -189,7 +189,7 @@ public class NativeToolTipViewController: PopoverViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func hideTitle(_ state: Bool) {
+    public func hideTitle(_ state: Bool) {
         titleLabel.isHidden = state
         titleLabelHeightConstraint.constant = 0
         titleLabelTopConstraint.constant = 0
