@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://twitter.com/Iamrandhir1"
   spec.swift_version = '5.0'
   spec.platform     = :ios, "12.0"
-  spec.source       = { :git => "https://github.com/randhirkumar65/RKUIKit.git", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/randhirkumar65/RKUIKit.git", :tag => "1.0.1" }
   spec.source_files  = "RKUIKit/**/*.{h,m,swift}"
 
 end
