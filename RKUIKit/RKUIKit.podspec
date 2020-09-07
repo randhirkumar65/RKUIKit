@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.license       = "MIT"
   spec.homepage     = "https://github.com/randhirkumar65/RKUIKit/"
   spec.author             = { "Randhir Kumar" => "randhirkumar.rk65@gmail.com" }
-  spec.social_media_url   = "https://twitter.com/randhirkumar65"
+  spec.social_media_url   = "https://twitter.com/Iamrandhir1"
   spec.swift_version = '5.0'
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/randhirkumar65/RKUIKit.git", :tag => "1.0.0" }
