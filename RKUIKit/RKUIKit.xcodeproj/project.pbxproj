@@ -12,6 +12,8 @@
 		D12F30B424FF71F800E09A44 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30B324FF71DF00E09A44 /* DateFormatters.swift */; };
 		D12F30CA24FF747B00E09A44 /* CollectionView+TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30C924FF747A00E09A44 /* CollectionView+TableView+Extensions.swift */; };
 		D12F30CC24FF755B00E09A44 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F30CB24FF754F00E09A44 /* NibLoadable.swift */; };
+		D172555225060F9B006D1CAB /* NativeToolTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172555125060F9B006D1CAB /* NativeToolTipViewController.swift */; };
+		D1725554250610BC006D1CAB /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725553250610BC006D1CAB /* PopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D12F30B324FF71DF00E09A44 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		D12F30C924FF747A00E09A44 /* CollectionView+TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+TableView+Extensions.swift"; sourceTree = "<group>"; };
 		D12F30CB24FF754F00E09A44 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		D172555125060F9B006D1CAB /* NativeToolTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeToolTipViewController.swift; sourceTree = "<group>"; };
+		D1725553250610BC006D1CAB /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				D12F30CB24FF754F00E09A44 /* NibLoadable.swift */,
+				D172555125060F9B006D1CAB /* NativeToolTipViewController.swift */,
+				D1725553250610BC006D1CAB /* PopoverViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -161,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D172555225060F9B006D1CAB /* NativeToolTipViewController.swift in Sources */,
 				D12F30B424FF71F800E09A44 /* DateFormatters.swift in Sources */,
 				D12F30CC24FF755B00E09A44 /* NibLoadable.swift in Sources */,
 				D12F30CA24FF747B00E09A44 /* CollectionView+TableView+Extensions.swift in Sources */,
+				D1725554250610BC006D1CAB /* PopoverViewController.swift in Sources */,
 				D12F30B224FF719700E09A44 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
