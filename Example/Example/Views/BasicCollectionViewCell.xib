@@ -17,26 +17,42 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6A-Jk-QgT">
-                        <rect key="frame" x="10" y="10" width="307" height="43"/>
+                        <rect key="frame" x="10" y="21" width="257" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-7n-lEQ">
+                        <rect key="frame" x="277" y="11.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="EfC-om-deY"/>
+                            <constraint firstAttribute="height" constant="40" id="ZNL-0m-vlb"/>
+                        </constraints>
+                        <state key="normal" image="info.circle.fill" catalog="system"/>
+                        <connections>
+                            <action selector="infoTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AGY-HK-SDe"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.41176470590000003" green="0.43529411759999997" blue="0.53333333329999999" alpha="0.78036708047945202" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="R6A-Jk-QgT" secondAttribute="trailing" constant="10" id="Ila-kO-Wu2"/>
-                <constraint firstItem="R6A-Jk-QgT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Vi8-sK-Bv6"/>
-                <constraint firstItem="R6A-Jk-QgT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="YBP-sN-0Sq"/>
-                <constraint firstAttribute="bottom" secondItem="R6A-Jk-QgT" secondAttribute="bottom" constant="10" id="yb0-yQ-O82"/>
+                <constraint firstItem="0ep-7n-lEQ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Nu6-fG-4w7"/>
+                <constraint firstItem="R6A-Jk-QgT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="TNc-Uz-efh"/>
+                <constraint firstItem="0ep-7n-lEQ" firstAttribute="leading" secondItem="R6A-Jk-QgT" secondAttribute="trailing" constant="10" id="a7F-rD-yYV"/>
+                <constraint firstItem="R6A-Jk-QgT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="mBe-Pu-EDu"/>
+                <constraint firstAttribute="trailing" secondItem="0ep-7n-lEQ" secondAttribute="trailing" constant="10" id="nGC-jh-oRA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="327" height="63"/>
             <connections>
+                <outlet property="infoButtonAction" destination="0ep-7n-lEQ" id="ESZ-gM-kum"/>
                 <outlet property="titleLabel" destination="R6A-Jk-QgT" id="NJo-am-tfj"/>
             </connections>
             <point key="canvasLocation" x="51" y="137"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

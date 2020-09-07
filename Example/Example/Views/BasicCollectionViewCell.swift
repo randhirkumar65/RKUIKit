@@ -11,12 +11,18 @@ import RKUIKit
 class BasicCollectionViewCell: UICollectionViewCell, NibLoadable {
 
     @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet private weak var infoButtonAction: UIButton!
+    var infoActionClosure: ((UIButton) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 8.0
     }
 
+    @IBAction private func infoTapped(_ sender: UIButton) {
+        infoActionClosure?(sender)
+    }
+    
     func configCell(model: LandingModel) {
         titleLabel.text = model.title
     }
