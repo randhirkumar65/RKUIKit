@@ -9,12 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NativeToolTipViewController" customModule="RKUIKit" customModuleProvider="target">
             <connections>
-                <outlet property="bodyLabel" destination="yPb-Q7-Sew" id="ugv-m7-YhJ"/>
-                <outlet property="bodyLabelTopConstraint" destination="oH6-NU-eUW" id="vGr-EE-ID6"/>
-                <outlet property="titleLabel" destination="mPA-eg-eXx" id="4wF-HJ-Acb"/>
-                <outlet property="titleLabelHeightConstraint" destination="CTw-Tj-siF" id="Bzr-8j-TpX"/>
-                <outlet property="titleLabelTopConstraint" destination="QJ6-MN-jRd" id="Brj-y5-Keo"/>
-                <outlet property="view" destination="2Hn-NX-wMT" id="pRa-FK-aTE"/>
+                <outlet property="bodyLabel" destination="yPb-Q7-Sew" id="Xu3-5H-nqd"/>
+                <outlet property="bodyLabelTopConstraint" destination="oH6-NU-eUW" id="pXZ-HW-bNY"/>
+                <outlet property="titleLabel" destination="mPA-eg-eXx" id="0oj-xk-JZW"/>
+                <outlet property="titleLabelHeightConstraint" destination="CTw-Tj-siF" id="hbF-Nv-zIG"/>
+                <outlet property="titleLabelTopConstraint" destination="QJ6-MN-jRd" id="Jk7-wS-ctZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
