@@ -93,7 +93,7 @@ public class NativeToolTipViewController: PopoverViewController {
         super.init(with: sourceView, permittedArrowDirections: .any, contentSize: CGSize.zero, cornerRadius: Constant.cornerRadius)
     }
 
-    init(with sourceView: UIView) {
+    public init(with sourceView: UIView) {
         super.init(with: sourceView, permittedArrowDirections: .any, contentSize: CGSize.zero, cornerRadius: Constant.cornerRadius)
         // Background color of tooltip
         backgroundColor = view.backgroundColor ?? UIColor.gray
