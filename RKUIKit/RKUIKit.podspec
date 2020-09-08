@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "RKUIKit"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "This pod will be handy for reusing UIKit components"
   spec.description  = "This pod will be handy for reusing UIKit components and has several helpers method which can save lot of development time."
   spec.license       = "MIT"
