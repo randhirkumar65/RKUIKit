@@ -59,25 +59,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6df-61-aj9">
-                                <rect key="frame" x="116.5" y="373" width="181" height="150"/>
+                                <rect key="frame" x="108.5" y="373" width="197" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-KP-kI3">
-                                        <rect key="frame" x="51" y="0.0" width="79" height="30"/>
-                                        <state key="normal" title="Show Alert "/>
+                                        <rect key="frame" x="51" y="0.0" width="95" height="30"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="  Show Alert   ">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="ShowAlertAction:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="WxN-29-fz4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjw-DL-3uh">
-                                        <rect key="frame" x="27" y="60" width="127" height="30"/>
-                                        <state key="normal" title="Show Choice Alert"/>
+                                        <rect key="frame" x="27" y="60" width="143" height="30"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="  Show Choice Alert  ">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="ShowChoiceAlertAction:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="3D5-sU-fNX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-iz-aad">
-                                        <rect key="frame" x="0.0" y="120" width="181" height="30"/>
-                                        <state key="normal" title="Show Choice Action Sheet"/>
+                                        <rect key="frame" x="0.0" y="120" width="197" height="30"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="  Show Choice Action Sheet  ">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="ShowChoiceAlertSheet:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="1sG-we-Jam"/>
                                         </connections>
