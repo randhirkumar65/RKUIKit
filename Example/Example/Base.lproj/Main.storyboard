@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFl-K0-bBv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-Ew-xEd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oh7-Iq-ctC">
                                     <size key="itemSize" width="128" height="128"/>
@@ -40,11 +40,79 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hTH-A6-6Ab"/>
                     <connections>
                         <outlet property="collectionView" destination="AvV-Ew-xEd" id="W8d-dw-ad5"/>
+                        <segue destination="yMa-Yd-7bB" kind="show" identifier="showAlertVC" id="dB6-ok-3e5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="Vyg-33-kyW">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" id="yMa-Yd-7bB" customClass="AlertViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZBn-6U-2Xh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6df-61-aj9">
+                                <rect key="frame" x="116.5" y="373" width="181" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-KP-kI3">
+                                        <rect key="frame" x="51" y="0.0" width="79" height="30"/>
+                                        <state key="normal" title="Show Alert "/>
+                                        <connections>
+                                            <action selector="ShowAlertAction:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="WxN-29-fz4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjw-DL-3uh">
+                                        <rect key="frame" x="27" y="60" width="127" height="30"/>
+                                        <state key="normal" title="Show Choice Alert"/>
+                                        <connections>
+                                            <action selector="ShowChoiceAlertAction:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="3D5-sU-fNX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-iz-aad">
+                                        <rect key="frame" x="0.0" y="120" width="181" height="30"/>
+                                        <state key="normal" title="Show Choice Action Sheet"/>
+                                        <connections>
+                                            <action selector="ShowChoiceAlertSheet:" destination="yMa-Yd-7bB" eventType="touchUpInside" id="1sG-we-Jam"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6df-61-aj9" firstAttribute="centerY" secondItem="ZBn-6U-2Xh" secondAttribute="centerY" id="6sH-Nx-BlG"/>
+                            <constraint firstItem="6df-61-aj9" firstAttribute="centerX" secondItem="ZBn-6U-2Xh" secondAttribute="centerX" id="Zhn-uD-P38"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G6u-sz-lyW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nq5-cw-e19"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4d3-0O-uWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GWW-ma-F75">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jFl-K0-bBv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OFY-ZI-OQ5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vMU-cn-sks"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQU-9p-OS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>

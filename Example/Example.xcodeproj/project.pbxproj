@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D11B1A93250654D70030079B /* SampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11B1A92250654D70030079B /* SampleView.xib */; };
 		D11B1A952506552C0030079B /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B1A942506552C0030079B /* SampleView.swift */; };
+		D11B1A9A2506B31B0030079B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B1A992506B31B0030079B /* AlertViewController.swift */; };
+		D11B1AA92506BBE60030079B /* ExampleTabbedContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B1AA82506BBE60030079B /* ExampleTabbedContainerViewController.swift */; };
+		D11B1AAD250741930030079B /* TabExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B1AAC250741930030079B /* TabExampleViewController.swift */; };
 		D1725563250612C5006D1CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725562250612C5006D1CAB /* AppDelegate.swift */; };
 		D1725565250612C5006D1CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725564250612C5006D1CAB /* SceneDelegate.swift */; };
 		D1725567250612C5006D1CAB /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1725566250612C5006D1CAB /* LandingViewController.swift */; };
@@ -26,6 +29,9 @@
 		224A98763BF8E5733BD32698 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		D11B1A92250654D70030079B /* SampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleView.xib; sourceTree = "<group>"; };
 		D11B1A942506552C0030079B /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		D11B1A992506B31B0030079B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		D11B1AA82506BBE60030079B /* ExampleTabbedContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTabbedContainerViewController.swift; sourceTree = "<group>"; };
+		D11B1AAC250741930030079B /* TabExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabExampleViewController.swift; sourceTree = "<group>"; };
 		D172555F250612C5006D1CAB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1725562250612C5006D1CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1725564250612C5006D1CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				D1725566250612C5006D1CAB /* LandingViewController.swift */,
+				D11B1A992506B31B0030079B /* AlertViewController.swift */,
+				D11B1AA82506BBE60030079B /* ExampleTabbedContainerViewController.swift */,
+				D11B1AAC250741930030079B /* TabExampleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1725567250612C5006D1CAB /* LandingViewController.swift in Sources */,
+				D11B1AAD250741930030079B /* TabExampleViewController.swift in Sources */,
+				D11B1AA92506BBE60030079B /* ExampleTabbedContainerViewController.swift in Sources */,
 				D18C4AE725061CEF0061A75A /* LandingViewModel.swift in Sources */,
 				D11B1A952506552C0030079B /* SampleView.swift in Sources */,
+				D11B1A9A2506B31B0030079B /* AlertViewController.swift in Sources */,
 				D172557C2506145A006D1CAB /* BasicCollectionViewCell.swift in Sources */,
 				D18C4AE925061D2D0061A75A /* LandingModel.swift in Sources */,
 				D1725563250612C5006D1CAB /* AppDelegate.swift in Sources */,

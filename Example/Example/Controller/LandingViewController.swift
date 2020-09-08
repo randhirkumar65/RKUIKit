@@ -29,7 +29,7 @@ class LandingViewController: UIViewController {
     
     private func setupViewModel() {
         viewModel = LandingViewModel(completionHandler: updateUI)
-        viewModel.initializeDataSource(datasource: [LandingModel(title: "Native Popover"), LandingModel(title: "Date Formatters"), LandingModel(title: "Loading from Nib")])
+        viewModel.initializeDataSource(datasource: [LandingModel(title: "Alert Presenter"), LandingModel(title: "Loading from Nib"), LandingModel(title: "Tabbed container")])
     }
     
     private func registerCell() {
@@ -78,30 +78,6 @@ class LandingViewController: UIViewController {
             }
         }
     }
-    
-    fileprivate func showPopOver(sender: UIButton) {
-        
-        // Calculate width allowed for the tooltip. Exclude the side margins.
-        //                let tipViewWidth = self.view.bounds.size.width - (2 * 12)
-        
-        // Initialize the tooltip VC
-        let newToolTipVC = NativeToolTipViewController(with: sender)
-        newToolTipVC.backgroundColor = .white
-        //                // Set the title
-        //                newToolTipVC.setTitleText(with: "title text")
-        //
-        //                // Set body text
-        //                if let attributedString = newToolTipVC.getAttributedStringForBodyText(bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum") {
-        //                    attributedString.addAttributes([.font: UIFont.systemFont(ofSize: 11.0, weight: .bold)], range: NSRange(location: 0, length: 8))
-        //                    newToolTipVC.setBodyText(with: attributedString)
-        //                }
-        //
-        //                // Update tooltip size based on text.
-        //                newToolTipVC.updateToolTipSize(toolTipOccupiedWith: tipViewWidth)
-        newToolTipVC.loadViewIfNeeded()
-        
-        self.present(newToolTipVC, animated: false, completion: nil)
-    }
 }
 
 // MARK: - Collection View delegate and datasource methods
@@ -117,11 +93,6 @@ extension LandingViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = BasicCollectionViewCell.dequeue(for: collectionView, at: indexPath)
         if let data = viewModel.getCellItem(atIndex: indexPath.item) {
             cell.configCell(model: data)
-            cell.hideInfoButton(isHide: indexPath.item != 0)
-            cell.infoActionClosure = { [weak self] sender in
-                guard let self = self else { return }
-                self.showPopOver(sender: sender)
-            }
         }
         return cell
     }
@@ -129,17 +100,17 @@ extension LandingViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
-            // Native popover
-            print("Native popover")
+            // Alert presenter
+            performSegue(withIdentifier: "showAlertVC", sender: nil)
         case 1:
-                 // Date Formatter
-                 print("Date Formatter")
-        case 2:
-                 // From Nib
-                 print("From Nib")
+            // Nib loadable
             loadSampleView()
-        default:
-            break
+        default:            
+            let tabbedContainer = ExampleTabbedContainerViewController()
+//              let tabbedContainerViewNavigationController = UINavigationController(rootViewController: tabbedContainer)
+//              tabbedContainerViewNavigationController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(tabbedContainer, animated: true)
+//              present(tabbedContainerViewNavigationController, animated: true)
         }
     }
     

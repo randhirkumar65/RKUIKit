@@ -13,19 +13,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample View loading from NIB. Removed after 5 sec" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-23-asy">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0tP-1n-QxX">
                     <rect key="frame" x="10" y="54" width="394" height="336"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample View loading from NIB. Removed after 5 sec" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-23-asy">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a0J-23-asy" secondAttribute="trailing" constant="10" id="24n-BU-mWA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="a0J-23-asy" secondAttribute="bottom" constant="10" id="Bgk-Bu-aIi"/>
-                <constraint firstItem="a0J-23-asy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="E5i-I6-mP9"/>
-                <constraint firstItem="a0J-23-asy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="X3P-6j-OeE"/>
+                <constraint firstItem="0tP-1n-QxX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="3hR-mH-GkW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0tP-1n-QxX" secondAttribute="trailing" constant="10" id="SJ3-0A-4sw"/>
+                <constraint firstItem="0tP-1n-QxX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="XVr-M5-XEB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0tP-1n-QxX" secondAttribute="bottom" constant="10" id="yXg-Nt-sOF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

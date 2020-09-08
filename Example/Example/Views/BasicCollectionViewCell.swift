@@ -17,13 +17,14 @@ class BasicCollectionViewCell: UICollectionViewCell, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 8.0
+        hideInfoButton()
     }
 
     @IBAction private func infoTapped(_ sender: UIButton) {
         infoActionClosure?(sender)
     }
     
-    func hideInfoButton(isHide: Bool) {
+    func hideInfoButton(isHide: Bool = true) {
         infoButtonAction.isHidden = isHide
         
     }
